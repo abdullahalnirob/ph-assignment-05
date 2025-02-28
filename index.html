@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevBoard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        font-family: "Outfit", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="px-10 my-5 bg-slate-200">
+    <header>
+      <nav
+        class="bg-white px-10 py-5 rounded-md shadow flex items-center justify-between"
+      >
+        <div class="flex items-center gap-1">
+          <img src="./assets/logo.png" alt="" />
+          <h2 class="text-xl">Dev<span class="font-bold">Board</span></h2>
+        </div>
+        <div class="flex items-center gap-5">
+          <div class="flex items-center gap-2">
+            <img src="./assets/checkbox.png" alt="" />
+            <span class="font-bold text-xl" id="CompletedTask"></span>
+          </div>
+          <div class="cursor-pointer">
+            <img src="./assets/theme-btn.png" alt="" />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="mt-5 grid grid-cols-[70%_30%]">
+      <section class="bg-white p-5 rounded-md mr-3">
+        <div class="flex items-center justify-between gap-2">
+          <div
+            class="flex items-center gap-5 bg-slate-100 px-7 py-7 rounded-md"
+          >
+            <div>
+              <img src="./assets/checkbox.png" alt="" />
+            </div>
+            <div>
+              <h2>Task Assign</h2>
+              <span class="font-bold" id="taskCount"></span>
+            </div>
+          </div>
+          <a href="./blog.html">
+            <div
+              class="cursor-pointer flex items-center px-10 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg"
+            >
+              <div>
+                <img src="./assets/board.png" alt="" />
+              </div>
+              <div class="ml-3 text-xl w-52">Discover Something New Today!</div>
+            </div>
+          </a>
+          <div
+            class="flex items-center gap-5 bg-slate-100 px-7 py-7 rounded-md"
+          >
+            <div class="p-3 rounded-full bg-white">
+              <img src="./assets/calender.png" alt="" />
+            </div>
+            <div>
+              <h2 class="font-bold text-xl">Wed</h2>
+              <span class="font-bold">Jul 28 2025 </span>
+            </div>
+          </div>
+        </div>
+        <!-- Cards -->
+        <section class="mt-5 grid grid-cols-3 gap-4">
+          <div class="bg-slate-200 p-5 rounded-md space-y-3 shadow-md">
+            <div>
+              <span class="px-2 py-1 rounded-md bg-white text-purple-600"
+                >ShopEase</span
+              >
+            </div>
+            <div>
+              <span class="text-xl font-semibold" id="title1"
+                >Fix Mobile Button Issue</span
+              >
+            </div>
+            <div>
+              <span class="text-slate-500 text-sm">
+                Debug using Chrome DevTools, check for overlapping elements.
+              </span>
+            </div>
+            <div class="flex items-center gap-1 justify-between">
+              <div>
+                <h1 class="text-sm">Deadline</h1>
+                <h2 class="font-bold">21 March 2025</h2>
+              </div>
+              <div>
+                <button
+                  id="button1"
+                  class="bg-blue-700 px-5 py-2 text-white cursor-pointer rounded hover:bg-blue-800 transition"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-slate-200 p-5 rounded-md space-y-3 shadow-md">
+            <div>
+              <span class="px-2 py-1 rounded-md bg-white text-green-600"
+                >CloudSync</span
+              >
+            </div>
+            <div>
+              <span class="text-xl font-semibold" id="title2"
+                >Add Dark Mode</span
+              >
+            </div>
+            <div>
+              <span class="text-slate-500 text-sm">
+                Store the user's preference in localStorage, update CSS
+                variables.
+              </span>
+            </div>
+            <div class="flex items-center gap-1 justify-between">
+              <div>
+                <h1 class="text-sm">Deadline</h1>
+                <h2 class="font-bold">21 March 2025</h2>
+              </div>
+              <div>
+                <button
+                  id="button2"
+                  class="bg-blue-700 px-5 py-2 text-white cursor-pointer rounded hover:bg-blue-800 transition"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-slate-200 p-5 rounded-md space-y-3 shadow-md">
+            <div>
+              <span class="px-2 py-1 rounded-md bg-white text-yellow-600"
+                >SwiftPay</span
+              >
+            </div>
+            <div>
+              <span class="text-xl font-semibold" id="title3"
+                >Optimize Home page</span
+              >
+            </div>
+            <div>
+              <span class="text-slate-500 text-sm">
+                Debug using Chrome DevTools, check for overlapping elements.
+              </span>
+            </div>
+            <div class="flex items-center gap-1 justify-between">
+              <div>
+                <h1 class="text-sm">Deadline</h1>
+                <h2 class="font-bold">21 March 2025</h2>
+              </div>
+              <div>
+                <button
+                  id="button3"
+                  class="bg-blue-700 px-5 py-2 text-white cursor-pointer rounded hover:bg-blue-800 transition"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-slate-200 p-5 rounded-md space-y-3 shadow-md">
+            <div>
+              <span class="px-2 py-1 rounded-md bg-white text-blue-600"
+                >Meta</span
+              >
+            </div>
+            <div>
+              <span class="text-xl font-semibold" id="title4"
+                >Add new emoji 🧑‍💻</span
+              >
+            </div>
+            <div>
+              <span class="text-slate-500 text-sm">
+                Debug using Chrome DevTools, check for overlapping elements.
+              </span>
+            </div>
+            <div class="flex items-center gap-1 justify-between">
+              <div>
+                <h1 class="text-sm">Deadline</h1>
+                <h2 class="font-bold">21 March 2025</h2>
+              </div>
+              <div>
+                <button
+                  id="button4"
+                  class="bg-blue-700 px-5 py-2 text-white cursor-pointer rounded hover:bg-blue-800 transition"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-slate-200 p-5 rounded-md space-y-3 shadow-md">
+            <div>
+              <span class="px-2 py-1 rounded-md bg-white text-red-600"
+                >Google LLC</span
+              >
+            </div>
+            <div>
+              <span class="text-xl font-semibold" id="title5"
+                >Integrate OpenAI API</span
+              >
+            </div>
+            <div>
+              <span class="text-slate-500 text-sm">
+                Debug using Chrome DevTools, check for overlapping elements.
+              </span>
+            </div>
+            <div class="flex items-center gap-1 justify-between">
+              <div>
+                <h1 class="text-sm">Deadline</h1>
+                <h2 class="font-bold">21 March 2025</h2>
+              </div>
+              <div>
+                <button
+                  id="button5"
+                  class="bg-blue-700 px-5 py-2 text-white cursor-pointer rounded hover:bg-blue-800 transition"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-slate-200 p-5 rounded-md space-y-3 shadow-md">
+            <div>
+              <span class="px-2 py-1 rounded-md bg-white text-indigo-600"
+                >Glassdoor</span
+              >
+            </div>
+            <div>
+              <span class="text-xl font-semibold" id="title6"
+                >Improve Job searching</span
+              >
+            </div>
+            <div>
+              <span class="text-slate-500 text-sm">
+                Debug using Chrome DevTools, check for overlapping elements.
+              </span>
+            </div>
+            <div class="flex items-center gap-1 justify-between">
+              <div>
+                <h1 class="text-sm">Deadline</h1>
+                <h2 class="font-bold">21 March 2025</h2>
+              </div>
+              <div>
+                <button
+                  id="button6"
+                  class="bg-blue-700 px-5 py-2 text-white cursor-pointer rounded hover:bg-blue-800 transition"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="bg-white rounded-md px-5">
+        <div class="flex items-center justify-center mt-10 gap-3">
+          <img src="./assets/activity.png" alt="" />
+          <span>Activity Log</span>
+        </div>
+        <div class="my-5">
+          <center>
+            <button
+            id="ClearHistory"
+              class="px-3 py-2 bg-blue-600 hover:bg-blue-700 duration-200 rounded-md text-white cursor-pointer"
+            >
+              Clear History
+            </button>
+          </center>
+        </div>
+        <div id="activityLog" class="mt-5"></div>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
