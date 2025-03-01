@@ -31,7 +31,7 @@
             <img src="./assets/checkbox.png" alt="" />
             <span class="font-bold text-xl" id="CompletedTask"></span>
           </div>
-          <div class="cursor-pointer">
+          <div class="cursor-pointer" id="themeButton">
             <img src="./assets/theme-btn.png" alt="" />
           </div>
         </div>
@@ -68,8 +68,8 @@
               <img src="./assets/calender.png" alt="" />
             </div>
             <div>
-              <h2 class="font-bold text-xl">Wed</h2>
-              <span class="font-bold">Jul 28 2025 </span>
+              <h2 id="day" class="font-bold text-xl"></h2>
+              <span id="date" class="font-bold"></span>
             </div>
           </div>
         </div>
@@ -272,7 +272,7 @@
         <div class="my-5">
           <center>
             <button
-            id="ClearHistory"
+              id="ClearHistory"
               class="px-3 py-2 bg-blue-600 hover:bg-blue-700 duration-200 rounded-md text-white cursor-pointer"
             >
               Clear History

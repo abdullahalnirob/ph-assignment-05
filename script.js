@@ -145,3 +145,23 @@ card6.button.addEventListener("click", () => {
     taskCount.innerText = 0;
   }
 });
+
+// theme switcher
+const themeSwitcher = document.getElementById("themeButton");
+const body = document.body;
+themeSwitcher.addEventListener("click", () => {
+  const r = Math.floor(Math.random() * 255);
+  const g = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
+  body.style.backgroundColor = `rgb(${r},${g},${b})`;
+});
+
+
+// daye date
+ const today = new Date();
+ const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+ const option = { year: "numeric", month: "short", day: "2-digit" };
+ const actualData = today.toLocaleDateString("en-US", option);
+
+ document.getElementById("day").textContent = days[today.getDay()];
+ document.getElementById("date").textContent = actualData;
